@@ -2,6 +2,8 @@
 .AppleDouble
 .LSOverride
 .vs
+.psd
 
 node_modules/
+market/
 /app/css/
