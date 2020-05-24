@@ -29,3 +29,21 @@ ul,li{
     margin: 0 auto;
     padding:  0 15px;
 }
+.container__fluid{
+    max-width: 100%;
+    margin: 0 auto;
+    padding:  0 30px;
+}
+
+@media (max-with:720px){
+    .container__fluid{
+        padding:  0 15px;
+    }
+}
+
+.title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 60px;
+    text-align: center;
+}

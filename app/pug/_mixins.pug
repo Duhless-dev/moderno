@@ -1,3 +1,17 @@
-mixin test
-    .test привет
+mixin product__item(list)
+    .product__inner-item.item__post(class= list.category class= list.category_g data-order= list.data)
+                        a.item__post-picture(href="#"  style= list.bg)
+                        .item__post__info.post__info
+                            .post__info__name
+                                a.post__info__name-title(href="#")= list.name
+                                a.post__info__name-category(href="#")= list.subtitle
+                            .post__info__price= list.price
+                        .item__post__about.post__about
+                            .post__about__author.post__author
+                                a.post__author-avatar(href="#" style= list.avatar)
+                                a.post__author-nik(href="#")= list.nik
+                            .post__about__raiting 
+                                span (
+                                span.raiting-number= list.rating_number
+                                span )
 

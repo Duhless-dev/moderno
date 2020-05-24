@@ -60,6 +60,26 @@ html(lang="ru")
                             input(type="text" placeholder="Search Your Keywords . . ." required)
                             button(type="submit")
                                 img(src="img/icon/search.png", alt="")
+        section.products
+            .container__fluid
+                .product__title.title Let’s Check Out Our Newest Release Prodcuts
+                .product__inner
+                    .product__inner-filter
+                        button(type="button" data-filter="all") All
+                        button(type="button" data-filter=".category-wordpress") WordPress
+                        button(type="button" data-filter=".category-joomla") Joomla
+                        button(type="button" data-filter=".category-plugins") Plugins
+                        button(type="button" data-filter=".category-component") Component
+                        button(type="button" data-filter=".category-psd") PSD 
+                    -var product__list = [{bg:"background-image: url(img/filter_content/item_1.jpg)",name:"Responsive Mobile APP", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_3.jpg)",name:"Food Menu", subtitle:"WordPress Plugin" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_4.jpg)",name:"Imac Mockup", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_5.jpg)",name:"Gymedge", subtitle:"Joomla Template" , price:"$45", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Micrsof",rating_number:"05",category:"mix category-joomla",data:"5",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_6.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$19", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Raklouse",rating_number:"05",category:"mix category-psd",data:"6",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_7.jpg)",name:"Doll Face", subtitle:"Illsatration" , price:"$10", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Mikc Art",rating_number:"05",category:"mix category-psd",data:"7",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_8.jpg)",name:"Designer Mockup", subtitle:"PsdTemplate" , price:"$10", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"ThemeLol",rating_number:"05",category:"mix category-joomla",data:"8",category_g:"category-new"}]
+                    .product__inner-filter-item
+                        for item in product__list
+                            +product__item(item)
+                    .product__inner-filter-down
+                        button(type="button" data-filter=".category-new") All New Items
+                        button(type="button" data-filter=".category-popular") Popular Items
+
+
 
 
 
@@ -71,5 +91,5 @@ html(lang="ru")
 
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-        script(src='js/libs.min.js')
-        script(src="js/main.min.js")
+        script(src='js/_libs.min.js')
+        script(src="js/main.js")

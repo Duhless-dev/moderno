@@ -11,7 +11,7 @@
 
  gulp.task('pug', function(){
    return gulp.src('app/*.pug')
-   .pipe(pug())
+   .pipe(pug("expanded"))
    .pipe(gulp.dest('app'))
    .pipe(browserSync.reload({stream: true})) 
  })   
@@ -56,7 +56,8 @@ gulp.task('script', function(){
 gulp.task('js', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    'node_modules/mixitup/dist/mixitup.min.js'
   ])
     .pipe(concat('_libs.min.js'))
     .pipe(uglify())
@@ -98,4 +99,4 @@ gulp.task('watch', function(){
 
 gulp.task('build', gulp.series('clean', 'export'));
 
-gulp.task('default', gulp.parallel('pug','css' ,'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'browser-sync', 'watch'));
