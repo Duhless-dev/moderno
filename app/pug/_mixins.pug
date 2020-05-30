@@ -54,7 +54,7 @@ mixin header
                         li
                             a(href="#") Components
                         li
-                            a(href="http://localhost:3000/page_items.html") Pages
+                            a(href="http://localhost:3000/page-items.html") Pages
                         li
                             a(href="#") Contact
                         li
@@ -125,3 +125,10 @@ mixin footer
                         input(type="text" placeholder="E-mail Address" required)
                         button(type="submit") 
         .footer__down © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+
+mixin breadcrumbs(...items)
+    .breadcrumbs
+        ul
+            each item in items
+                li
+                    a(href="#")= item

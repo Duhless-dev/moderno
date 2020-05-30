@@ -5,7 +5,11 @@ html{
 *,*::before,*::after{
     box-sizing: inherit;
 }
-
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+}
 body{
     font-family: 'Roboto-Regular', sans-serif;
     font-size: 15px;
@@ -65,4 +69,12 @@ ul,li{
 }
 footer {
 	flex: 0 0 auto;
+}
+.page__asside-title{
+    font-size: 20px;
+    color: $dark;
+    @include f700;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 15px;
 }

@@ -11,7 +11,9 @@
 
  gulp.task('pug', function(){
    return gulp.src('app/*.pug')
-   .pipe(pug("expanded"))
+   .pipe(pug({
+    pretty: true
+  }))
    .pipe(gulp.dest('app'))
    .pipe(browserSync.reload({stream: true})) 
  })   
@@ -38,6 +40,7 @@ gulp.task('css', function(){
     'node_modules/magnific-popup/dist/magnific-popup.css',
     'node_modules/animate.css/animate.css',
     'node_modules/rateyo/src/jquery.rateyo.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
@@ -60,6 +63,7 @@ gulp.task('js', function(){
     'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
     'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
   ])
     .pipe(concat('_libs.min.js'))
     .pipe(uglify())
