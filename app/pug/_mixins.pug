@@ -1,134 +1,145 @@
 mixin product__item(list)
 
-    .product__inner-item.item__post
-                        a.item__post-picture(href="#"  style= list.bg)
-                        .item__post__info.post__info
-                            .post__info__name
-                                a.post__info__name-title(href="#")= list.name
-                                a.post__info__name-category(href="#")= list.subtitle
-                            .post__info__price= list.price
-                        .item__post__about.post__about
-                            .post__about__author.post__author
-                                a.post__author-avatar(href="#" style= list.avatar)
-                                a.post__author-nik(href="#")= list.nik
-                            .post__about__raiting
-                                a.raiting-star(href='#')
-                                span (
-                                span.raiting-number= list.rating_number
-                                span )
+	.product__inner-item.item__post
+		a.item__post-picture(href="#"  style= list.bg)
+		.info-wrapper
+			.item__post__info.post__info
+				.post__info__name
+					a.post__info__name-title(href="#")= list.name
+					a.post__info__name-category(href="#")= list.subtitle
+					.post__info__name-text Pimply dummy text of the printing and typesetting industry. 
+				.post__info__price= list.price
+					span Sales ( 14 ) 
+			.item__post__about.post__about
+				.post__about__author.post__author
+					a.post__author-avatar(href="#" style= list.avatar)
+					a.post__author-nik(href="#")= list.nik
+				.post__about__raiting
+					a.raiting-star(href='#')
+					span (
+					span.raiting-number= list.rating_number
+					span )
+					.post-comments.icon-comment-o
+						span (
+						span.number 10
+						span )
+					.post-like.icon-heart-o
+						span (
+						span.number 20
+						span )
 
 
 mixin header
-    .header
-        .header__top
-            .container
-                .header__inner
-                    .header__inner-logo
-                        a(href="#")
-                            img(src="img/logo.png" alt="")
-                    .header__inner__panel.panel        
-                        .panel__help
-                            a(href="#") Need help?
-                            span  Talk to an expert: 
-                            a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
-                        .panel__box.btn
-                            a.btn-basket(href="#")
-                            a.panel__btn.login(href="#") Login
-                            a.panel__btn.register(href="#") Register
-        .header__down
-            .container
-                nav.menu
-                    ul.menu__list
-                        li
-                            a(href="http://localhost:3000") Home                                                                                                         
-                        li
-                            a(href="#") About 
-                        li
-                            a(href="#") WordPress
-                        li
-                            a(href="#") Joomla
-                        li
-                            a(href="#") PSD
-                        li
-                            a(href="#") Plugins
-                        li
-                            a(href="#") Components
-                        li
-                            a(href="http://localhost:3000/page-items.html") Pages
-                        li
-                            a(href="#") Contact
-                        li
-                            a(href="#") Help
+	.header
+		.header__top
+			.container
+				.header__inner
+					.header__inner-logo
+						a(href="#")
+							img(src="img/logo.png" alt="")
+					.header__inner__panel.panel        
+						.panel__help
+							a(href="#") Need help?
+							span  Talk to an expert: 
+							a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
+						.panel__box.btn
+							a.btn-basket(href="#")
+							a.panel__btn.login(href="#") Login
+							a.panel__btn.register(href="#") Register
+		.header__down
+			.container
+				nav.menu
+					ul.menu__list
+						li
+							a(href="http://localhost:3000") Home                                                                                                         
+						li
+							a(href="#") About 
+						li
+							a(href="#") WordPress
+						li
+							a(href="#") Joomla
+						li
+							a(href="#") PSD
+						li
+							a(href="#") Plugins
+						li
+							a(href="#") Components
+						li
+							a(href="http://localhost:3000/page-items.html") Pages
+						li
+							a(href="#") Contact
+						li
+							a(href="#") Help
 
 mixin search
-    .search(style="background-image: url(img/search-bg.jpg)")
-            .container
-                .search__inner
-                    .search__inner-title Welcome To Foxtar Market Place!
-                    .search__inner-subtitle Premium WordPress Themes, Web Templates and Many More ...
-                    .search__inner-form
-                        form
-                            input(type="text" placeholder="Search Your Keywords . . ." required)
-                            button(type="submit")
-                                img(src="img/icon/search.png", alt="")
+	.search(style="background-image: url(img/search-bg.jpg)")
+		.container
+			.search__inner
+				.search__inner-title Welcome To Foxtar Market Place!
+				.search__inner-subtitle Premium WordPress Themes, Web Templates and Many More ...
+				.search__inner-form
+					form
+						input(type="text" placeholder="Search Your Keywords . . ." required)
+						button(type="submit")
+							img(src="img/icon/search.png" alt="")
 
 mixin footer
-    .footer
-        .container
-            .footer__inner
-                .footer__col.about
-                    .footer__title About Company
-                    .about-text Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
-                    a.about-adress(href="#") PO Box 16122 Collins Street West Victoria 8007 Australia
-                    a.about-phone(href='tel 61383766284') +61 3 8376 6284
-                .footer__menu
-                    .footer__title Join Our Community
-                    ul
-                        li
-                            a(href="#") Home
-                        li
-                            a(href="#") Forums
-                        li
-                            a(href="#") Become an Author
-                        li
-                            a(href="#") Community Meetups
-                        li
-                            a(href="#") Become an Affiliate
-                .footer__menu
-                    .footer__title Need Help?
-                    ul
-                        li
-                            a(href="#") Help Center
-                        li
-                            a(href="#") Foxtar Market Terms
-                        li
-                            a(href="#") Author Terms
-                        li
-                            a(href="#") Foxtar Licenses
-                        li
-                            a(href="#") Contact Us
-                .footer__col.social
-                    .footer__title Follow Us On
-                    ul
-                        li
-                            a.col-facebook(href="#" style='background-image: url(img/icon/social.png)')
-                        li
-                            a.col-twitter(href="#" style='background-image: url(img/icon/social.png)')
-                        li
-                            a.col-youtube(href="#" style='background-image: url(img/icon/social.png)')
-                        li
-                            a.col-pinterest(href="#" style='background-image: url(img/icon/social.png)')
-                        li
-                            a.col-in(href="#" style='background-image: url(img/icon/social.png)')
-                    .social-title Newsletter Sign Up!
-                    form
-                        input(type="text" placeholder="E-mail Address" required)
-                        button(type="submit") 
-        .footer__down © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+	.footer
+		.container
+			.footer__inner
+				.footer__col.about
+					.footer__title About Company
+					.about-text Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
+					a.about-adress(href="#") PO Box 16122 Collins Street West Victoria 8007 Australia
+					a.about-phone(href='tel 61383766284') +61 3 8376 6284
+				.footer__menu
+					.footer__title Join Our Community
+					ul
+						li
+							a(href="#") Home
+						li
+							a(href="#") Forums
+						li
+							a(href="#") Become an Author
+						li
+							a(href="#") Community Meetups
+						li
+							a(href="#") Become an Affiliate
+				.footer__menu
+					.footer__title Need Help?
+					ul
+						li
+							a(href="#") Help Center
+						li
+							a(href="#") Foxtar Market Terms
+						li
+							a(href="#") Author Terms
+						li
+							a(href="#") Foxtar Licenses
+						li
+							a(href="#") Contact Us
+				.footer__col.social
+					.footer__title Follow Us On
+					ul
+						li
+							a.col-facebook(href="#" style='background-image: url(img/icon/social.png)')
+						li
+							a.col-twitter(href="#" style='background-image: url(img/icon/social.png)')
+						li
+							a.col-youtube(href="#" style='background-image: url(img/icon/social.png)')
+						li
+							a.col-pinterest(href="#" style='background-image: url(img/icon/social.png)')
+						li
+							a.col-in(href="#" style='background-image: url(img/icon/social.png)')
+					.social-title Newsletter Sign Up!
+					form
+						input(type="text" placeholder="E-mail Address" required)
+						button(type="submit") 
+		.footer__down © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
 
 mixin breadcrumbs(...items)
-    .breadcrumbs
-        ul
-            each item in items
-                li
-                    a(href="#")= item
+	.breadcrumbs
+		ul
+			each item in items
+				li
+					a(href="#")= item

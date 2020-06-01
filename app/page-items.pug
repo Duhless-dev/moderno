@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="ie=edge")
-        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
-        link(rel="stylesheet" href="css/style.min.css")
-        title Moderno
-    body
-        include ./pug/_mixins.pug 
-        include ./pug/_mixin_svg.pug
-        .wrapper
-            .content
-                header.page_items-header
-                    +header
-                section.page_items-search
-                    +search
-                section.page_items-breadcrumbs
-                    .container
-                        +breadcrumbs('Home','Product Page')
-                section.page_items-pages
-                    .container
-                        .page-wrpapper
-                            asside.page_items__asside
-                                .page_items-category
-                                    .category-title.page__asside-title Categories
-                                    ul.category-list
-                                        li
-                                            a(href="#") WordPress
-                                            span (150)
-                                        li
-                                            a(href="#") Joomla
-                                            span (100)
-                                        li
-                                            a(href="#") PSD
-                                            span (50)
-                                        li
-                                            a(href="#") Plugins
-                                            span (60)
-                                        li
-                                            a(href="#") Components
-                                            span (40)
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.page_items-header
+					+header
+				section.page_items-search
+					+search
+				section.page_items-breadcrumbs
+					.container
+						+breadcrumbs('Home','Product Page')
+				section.page_items-pages
+					.container
+						.page-wrpapper
+							asside.page_items__asside
+								.page_items-category
+									.category-title.page__asside-title Categories
+									ul.category-list
+										li
+											a(href="#") WordPress
+											span (150)
+										li
+											a(href="#") Joomla
+											span (100)
+										li
+											a(href="#") PSD
+											span (50)
+										li
+											a(href="#") Plugins
+											span (60)
+										li
+											a(href="#") Components
+											span (40)
 
-                                .page_items__filter
-                                    .page_items__filter-title.page__asside-title Price Range
-                                    form
-                                        input.js-range-slider(type="text" name="my_range" value="")
-                                        button(type="submit") Search
-                                .page_items__topsellers
-                                    .page_items__topsellers-title.page__asside-title Top 10 Sellers
-                                    ul
-                                        li 
-                                            .page_items__topsellers__wrapper-items
-                                                +product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
-                                        li 
-                                            .page_items__topsellers__wrapper-items
-                                                +product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
-                                        li 
-                                            .page_items__topsellers__wrapper-items
-                                                +product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
-                                  
-                                    button
-                                        a(href="#") View All
-                                    
-                            .page_items-products
-                                .page_items-products__search
-                                .page_items-products__post
-                                        -var product_slider__list = [{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"}]
-                                        for item in  product_slider__list
-                                            .page_items-products__post-wrapper
-                                                +product__item(item)
-                                    
-                                
-                                .page_items-products__pogination
+								.page_items__filter
+									.page_items__filter-title.page__asside-title Price Range
+									form
+										input.js-range-slider(type="text" name="my_range" value="")
+										button(type="submit") Search
+								.page_items__topsellers
+									.page_items__topsellers-title.page__asside-title Top 10 Sellers
+									ul
+										li 
+											.page_items__topsellers__wrapper-items
+												+product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
+										li 
+											.page_items__topsellers__wrapper-items
+												+product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
+										li 
+											.page_items__topsellers__wrapper-items
+												+product__item({bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"})
 
-            footer.page_items-footer
-                +footer
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-        script(src="js/_libs.min.js")
-        script(src="js/main.js")   
+									button
+										a(href="#") View All
+
+							.page_items-products
+								.products__search
+									.products__search__sort
+										button.products__search__sort-down.icon-sort-amount-asc
+										button.products__search__sort-up.icon-sort-amount-desc.sort-active
+										.products__search__sort-text Sort by: New Items
+										.products__search__sort-arrows
+											button.arrowup.icon-sort-asc
+											button.arrowdown.icon-sort-down
+									.product__search__show
+										button.product__search__show-large.icon-th-large.product-btn-active
+										button.product__search__show-list.icon-th-list
+
+
+
+								.page_items-products__post
+									-var product_slider__list = [{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"}]
+									for item in  product_slider__list
+										.page_items-products__post-wrapper
+											+product__item(item)
+
+
+								.page_items__pogination
+									ul
+										li.active
+											a(href="#") 1
+										li
+											a(href="#") 2
+										li
+											a(href="#") 3
+										li
+											a(href="#") 4
+
+			footer.page_items-footer
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src="js/main.js")   

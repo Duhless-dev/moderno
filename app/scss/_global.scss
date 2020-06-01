@@ -78,3 +78,11 @@ footer {
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 15px;
 }
+
+.post__info__name-text,.post-comments,.post-like{
+	display: none;
+}
+
+.post__info__price{
+	span{ display: none;}
+}
