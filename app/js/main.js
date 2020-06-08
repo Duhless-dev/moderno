@@ -43,6 +43,41 @@ $(function () {
 		$('.products__search__sort-down').addClass('sort-active');
 	});
 
+	$(".basket-box").hover(function () {
+		if ($('.basket__items').is(':hidden')) { // задаем функцию при наведении курсора на элемент	
+			$(".basket__items").slideDown();
+		}
+	}, function () {
+		if ($('.basket__items').is(':visible')) {
+			// / задаем функцию, которая срабатывает, когда указатель выходит из элемента
+			$(".basket__items").slideUp();
+		}
+	});
+	$(".message-box").hover(function () { // задаем функцию при наведении курсора на элемент
+		if ($('.message-box .list__items').is(':hidden')) {
+			$(".message-box .list__items").slideDown()
+		}
+	}, function () {
+		if ($('.message-box .list__items').is(':visible')) {	// задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
+			$(".message-box .list__items").slideUp();
+		}
+	});
+	$(".notification-box").hover(function () {
+		if ($('.notification-box .list__items').is(':hidden')) { // задаем функцию при наведении курсора на элемент	
+			$(".notification-box .list__items").slideDown()
+		}
+	}, function () {
+		if ($('.notification-box .list__items').is(':visible')) { // задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
+			$(".notification-box .list__items").slideUp();
+		}
+	});
 
+	$('.burger__btn').on('click', function () {
+		$('.header__inner__panel').slideToggle();
+
+	});
+	$('.burger__btn').on('click', function () {
+		$('.header__down').slideToggle();
+	});
 	var mixer = mixitup('.product__inner-filter-item');
 });

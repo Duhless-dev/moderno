@@ -42,34 +42,196 @@ mixin header
 							a(href="#") Need help?
 							span  Talk to an expert: 
 							a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
+						.panel__icon
+							.notification-box.login-off
+								a.notification.header__icon.icon-bell-o(href="#")
+									.notification__number 8
+								+down__list
+							.message-box.login-off
+								a.message.header__icon.icon-envelope-o(href="#")
+									.message__number 5
+								+down__list
+							.basket-box.basket-off
+								a.basket.header__icon.icon-shopping-cart(href="#")
+									.basket__number 23
+								ul.basket__items
+									li.basket__item
+										a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+										.basket__info
+											a.basket__title(href="#") Grand Ballet
+											a.basket__subtitle(href="#") WordPress
+											.basket__price $59
+									li.basket__item
+										a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+										.basket__info
+											a.basket__title(href="#") Grand Ballet
+											a.basket__subtitle(href="#") WordPress
+											.basket__price $59
+
+									li.basket__total
+										.total__up Total
+											span $118
+										.total__down
+											a.total__cart(href="#") Go to Cart
+											a.total__check(href="#") Go to Checkout
+						.panel__user.login-off
+							a.user__icon(href="#" style = "background-image: url(img/icon/user-head.jpg)")
+							.user__info
+								a.user__name(href="#") Mike Hussy
+								.user__money $171.00
+								.user__list
+									ul
+										li.green__list
+											a(href="#") Profile Page
+										li.green__list
+											a(href="#") Portfolio
+										li.green__list
+											a(href="#") Account Setting
+										li.green__list
+											a(href="#") Downloads
+										li.green__list
+											a(href="#") Wishlist
+										li.green__list
+											a(href="#") Upload Item
+										li.green__list
+											a(href="#") Statement
+										li.green__list
+											a(href="#") Withdraws
+
 						.panel__box.btn
 							a.btn-basket(href="#")
 							a.panel__btn.login(href="#") Login
 							a.panel__btn.register(href="#") Register
-		.header__down
+							a.panel__btn.register.login-off(href="#") Logout
+			.header__down
+				.container
+					nav.menu
+						ul.menu__list
+							li
+								a(href="http://localhost:3000") Home                                                                                                         
+							li
+								a(href="#") About 
+							li
+								a(href="#") WordPress
+							li
+								a(href="#") Joomla
+							li
+								a(href="#") PSD
+							li
+								a(href="#") Plugins
+							li
+								a(href="#") Components
+							li
+								a(href="http://localhost:3000/page-items.html") Pages
+							li
+								a(href="#") Contact
+							li
+								a(href="#") Help
+mixin header-login
+	.header
+		.header__top
 			.container
-				nav.menu
-					ul.menu__list
-						li
-							a(href="http://localhost:3000") Home                                                                                                         
-						li
-							a(href="#") About 
-						li
-							a(href="#") WordPress
-						li
-							a(href="#") Joomla
-						li
-							a(href="#") PSD
-						li
-							a(href="#") Plugins
-						li
-							a(href="#") Components
-						li
-							a(href="http://localhost:3000/page-items.html") Pages
-						li
-							a(href="#") Contact
-						li
-							a(href="#") Help
+				.header__inner
+					.header__inner-logo
+						a(href="#")
+							img(src="img/logo.png" alt="")
+					.burger__menu
+						.burger__btn
+							ul
+								li
+								li
+								li
+						.header__inner__panel.panel
+							.panel__wrapper        
+								.panel__help
+									a(href="#") Need help?
+									span  Talk to an expert: 
+									a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
+								.panel__icon
+									.notification-box
+										a.notification.header__icon.icon-bell-o(href="#")
+											.notification__number 8
+										+down__list
+									.message-box
+										a.message.header__icon.icon-envelope-o(href="#")
+											.message__number 5
+										+down__list
+									.basket-box
+										a.basket.header__icon.icon-shopping-cart(href="#")
+											.basket__number 23
+										ul.basket__items
+											li.basket__item
+												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+												.basket__info
+													a.basket__title(href="#") Grand Ballet
+													a.basket__subtitle(href="#") WordPress
+													.basket__price $59
+											li.basket__item
+												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+												.basket__info
+													a.basket__title(href="#") Grand Ballet
+													a.basket__subtitle(href="#") WordPress
+													.basket__price $59
+
+											li.basket__total
+												.total__up Total
+													span $118
+												.total__down
+													a.total__cart(href="#") Go to Cart
+													a.total__check(href="#") Go to Checkout
+								.panel__user
+									a.user__icon(href="#" style = "background-image: url(img/icon/user-head.jpg)")
+									.user__info
+										a.user__name(href="#") Mike Hussy
+										.user__money $171.00
+										.user__list
+											ul
+												li.green__list
+													a(href="#") Profile Page
+												li.green__list
+													a(href="#") Portfolio
+												li.green__list
+													a(href="#") Account Setting
+												li.green__list
+													a(href="#") Downloads
+												li.green__list
+													a(href="#") Wishlist
+												li.green__list
+													a(href="#") Upload Item
+												li.green__list
+													a(href="#") Statement
+												li.green__list
+													a(href="#") Withdraws
+
+								.panel__box.btn
+									a.btn-basket(href="#")
+									a.panel__btn.login.login-off(href="#") Login
+									a.panel__btn.register.login-off(href="#") Register
+									a.panel__btn.register(href="#") Logout
+			.header__down
+				.container
+					nav.menu
+						ul.menu__list
+							li
+								a(href="http://localhost:3000") Home                                                                                                         
+							li
+								a(href="#") About 
+							li
+								a(href="#") WordPress
+							li
+								a(href="#") Joomla
+							li
+								a(href="#") PSD
+							li
+								a(href="#") Plugins
+							li
+								a(href="#") Components
+							li
+								a(href="http://localhost:3000/page-items.html") Pages
+							li
+								a(href="#") Contact
+							li
+								a(href="#") Help
 
 mixin search
 	.search(style="background-image: url(img/search-bg.jpg)")
@@ -89,7 +251,7 @@ mixin footer
 			.footer__inner
 				.footer__col.about
 					.footer__title About Company
-					.about-text Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
+					.about-text Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse. Fusce sit amet urna iat.Praesent vel rutrum purus.
 					a.about-adress(href="#") PO Box 16122 Collins Street West Victoria 8007 Australia
 					a.about-phone(href='tel 61383766284') +61 3 8376 6284
 				.footer__menu
@@ -143,3 +305,31 @@ mixin breadcrumbs(...items)
 			each item in items
 				li
 					a(href="#")= item
+
+mixin down__list
+	ul.list__items
+		li.list__item
+			.item__content
+				a.item__user(href="#" style="background-image: url(img/icon/user-head.jpg)")
+				.item__info
+					a.item__name(href="#") Kazi Fahim
+					a.item__subtitle(href="#") Need WP Help!
+					.item__date 01 Dec, 2016
+			a.item__status(href="#")
+		li.list__item
+			.item__content
+				a.item__user(href="#" style="background-image: url(img/icon/user-head.jpg)")
+				.item__info
+					a.item__name(href="#") Kazi Fahim
+					a.item__subtitle(href="#") Need WP Help!
+					.item__date 01 Dec, 2016
+			a.item__status(href="#")
+		li.list__item
+			.item__content
+				a.item__user(href="#" style="background-image: url(img/icon/user-head.jpg)")
+				.item__info
+					a.item__name(href="#") Kazi Fahim
+					a.item__subtitle(href="#") Need WP Help!
+					.item__date 01 Dec, 2016
+			a.item__status(href="#")
+

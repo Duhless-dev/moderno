@@ -1,0 +1,30 @@
+
+
+@keyframes slideanimation{
+    0%{
+		 .user__list{
+				padding: 0px 20px;
+				opacity: 0;
+			li{
+				height: 0;
+				
+			}
+		}
+        // transform:translateX(1000px);
+        // transform: translateY(1000px);
+    }
+    
+    100%{
+			.user__list{
+				padding: 22px 20px;
+				opacity: 1;
+		li{
+			height: 100%;
+		}
+				
+			}
+		}
+        // transform: translateX(0);
+        // transform: translateY(0);
+}
+
