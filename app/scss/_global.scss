@@ -107,6 +107,14 @@ footer {
 				font-family: 'icomoon';
                 }
 }
+.asside-wrapper{
+	padding: 25px 34px 25px 22px;
+background-color: #ffffff;
+border: 1px solid #dcdcdc;
+margin-bottom: 30px;
+
+}
+
 
 .header__icon{
 		width: 34px;
@@ -138,4 +146,142 @@ footer {
 		}
 	}
 
+}
+
+.wrapper-picture{
+	background-color: #ffffff;
+	padding: 19px 20px 17px;
+	height: 460px;
+	border: 1px solid #d7d7d7;
+	margin-bottom: 39px;
+}
+.picture-wrapper{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+.global-title{
+color: $dark;
+font-size: 30px;
+@include f500;
+margin-bottom: 25px;
+}
+
+.global-text{
+	color: #707070;
+font-size: 16px;
+margin-bottom: 42px;
+max-width: 850px;
+}
+.wrapper-tabs{
+	width: 100%;
+	border: 1px solid #d7d7d7;
+	background-color: #ffffff;
+}
+.tabs{
+	display: flex;
+}
+.tabs-btn{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+	height: 60px;
+	color: #70838d;
+	font-size: 16px;
+	border-bottom: 1px solid #d7d7d7;
+	&+&{
+		border-left: 1px solid #d7d7d7;
+	}
+	&.active{
+		border-bottom: 3px solid $green;
+		color: $dark;
+		@include f500;
+		}
+}
+.tab_content{
+	padding: 40px 35px 70px;
+	height: 265px;
+}
+.tab-item{
+	display: none;
+		ul{
+			display: inline-block;
+			height: 161px;
+			column-count: 2;
+			column-gap: 15px;
+			column-width: 270px;
+			column-fill: auto
+		}
+	li{
+		padding-left: 20px;
+		margin-bottom: 10px;
+	}
+	&:first-child{
+		display: block;
+	
+	}
+}
+.wrapper__asside{
+	padding: 25px 34px 25px 22px;
+	background-color: #ffffff;
+	border: 1px solid #dcdcdc;
+	margin-bottom: 30px;
+}
+.author-information{
+	display: flex;
+	margin-top: 25px;
+	margin-bottom: 24px;
+	
+}
+.author-avatar{
+width: 73px;
+height: 63px;
+
+}
+.author-info{
+	margin-left: 14px;
+	margin-top: -2spx;
+}
+.author-name{
+	display: block;
+	font-size: 18px;
+	color: $dark;
+	line-height: 13px;
+	margin-bottom: 17px;
+}
+.auhor-link{
+	font-size: 13px;
+	color: #707070;
+	padding: 8px 12px;
+	border: 1px solid #cccccc;
+	line-height: 11px;
+}
+.author-achivment{
+	ul{
+		display: flex;
+		justify-content: space-between;
+		.icon-foursquare::before{
+			left: 20px;
+		}
+		li{
+			width:34px;
+			height: 37px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			&::before{
+				position: absolute;
+				top: 6px;
+				left: 50%;
+				transform: translate(-50%);
+				font-size: 20px;
+				color: #ffffff;
+			}
+		}
+	}
 }

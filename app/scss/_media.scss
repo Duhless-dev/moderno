@@ -122,6 +122,9 @@
 	.panel__help{
 		display: none;
 	}
+	.panel__help.panel-off{
+		display: block;
+	}
 }
 
 @media (max-width: 550px){
@@ -133,7 +136,15 @@
 	}
 	.basket-box .basket__items{
 		left: 0;
+		}
+	.basket-box.basket-off{ 
+	.basket__items{
+		right: 0;
+		left: auto;
 	}
+	}
+
+	
 }
 
 @media (max-width: 527px){
@@ -154,8 +165,16 @@
 	}
 
 }
+@media (max-width: 440px){
+	.basket-box.basket-off  .basket__items{
+		right: -160%;
+	}
+}
 @media (max-width: 425px){
 	.notification-box,.message-box{
+		display: none;
+	}
+	.panel__help.panel-off{
 		display: none;
 	}
 
@@ -163,6 +182,15 @@
 @media (max-width: 340px){
 	.panel__user{
 		margin-right: 10px;
+	}
+
+}
+@media (max-width: 325px){
+.basket-box.basket-off{ 
+	.basket__items{
+		right: -200%;
+		left: auto;
+	}
 	}
 
 }

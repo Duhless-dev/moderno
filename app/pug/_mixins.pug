@@ -37,72 +37,79 @@ mixin header
 					.header__inner-logo
 						a(href="#")
 							img(src="img/logo.png" alt="")
-					.header__inner__panel.panel        
-						.panel__help
-							a(href="#") Need help?
-							span  Talk to an expert: 
-							a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
-						.panel__icon
-							.notification-box.login-off
-								a.notification.header__icon.icon-bell-o(href="#")
-									.notification__number 8
-								+down__list
-							.message-box.login-off
-								a.message.header__icon.icon-envelope-o(href="#")
-									.message__number 5
-								+down__list
-							.basket-box.basket-off
-								a.basket.header__icon.icon-shopping-cart(href="#")
-									.basket__number 23
-								ul.basket__items
-									li.basket__item
-										a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
-										.basket__info
-											a.basket__title(href="#") Grand Ballet
-											a.basket__subtitle(href="#") WordPress
-											.basket__price $59
-									li.basket__item
-										a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
-										.basket__info
-											a.basket__title(href="#") Grand Ballet
-											a.basket__subtitle(href="#") WordPress
-											.basket__price $59
+					.burger__menu
+						.burger__btn
+							ul
+								li
+								li
+								li
+						.header__inner__panel.panel
+							.panel__wrapper      
+								.panel__help.panel-off
+									a(href="#") Need help?
+									span  Talk to an expert: 
+									a.panel__help-phone(href="tel:61383766284") +61 3 8376 6284
+								.panel__icon
+									.notification-box.login-off
+										a.notification.header__icon.icon-bell-o(href="#")
+											.notification__number 8
+										+down__list
+									.message-box.login-off
+										a.message.header__icon.icon-envelope-o(href="#")
+											.message__number 5
+										+down__list
+									.basket-box.basket-off
+										a.basket.header__icon.icon-shopping-cart(href="#")
+											.basket__number 23
+										ul.basket__items
+											li.basket__item
+												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+												.basket__info
+													a.basket__title(href="#") Grand Ballet
+													a.basket__subtitle(href="#") WordPress
+													.basket__price $59
+											li.basket__item
+												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
+												.basket__info
+													a.basket__title(href="#") Grand Ballet
+													a.basket__subtitle(href="#") WordPress
+													.basket__price $59
 
-									li.basket__total
-										.total__up Total
-											span $118
-										.total__down
-											a.total__cart(href="#") Go to Cart
-											a.total__check(href="#") Go to Checkout
-						.panel__user.login-off
-							a.user__icon(href="#" style = "background-image: url(img/icon/user-head.jpg)")
-							.user__info
-								a.user__name(href="#") Mike Hussy
-								.user__money $171.00
-								.user__list
-									ul
-										li.green__list
-											a(href="#") Profile Page
-										li.green__list
-											a(href="#") Portfolio
-										li.green__list
-											a(href="#") Account Setting
-										li.green__list
-											a(href="#") Downloads
-										li.green__list
-											a(href="#") Wishlist
-										li.green__list
-											a(href="#") Upload Item
-										li.green__list
-											a(href="#") Statement
-										li.green__list
-											a(href="#") Withdraws
+											li.basket__total
+												.total__up Total
+													span $118
+												.total__down
+													a.total__cart(href="#") Go to Cart
+													a.total__check(href="#") Go to Checkout
+								.panel__user.login-off
+									a.user__icon(href="#" style = "background-image: url(img/icon/user-head.jpg)")
+									.user__info
+										a.user__name(href="#") Mike Hussy
+										.user__money $171.00
+										.user__list
+											ul
+												li.green__list
+													a(href="#") Profile Page
+												li.green__list
+													a(href="#") Portfolio
+												li.green__list
+													a(href="#") Account Setting
+												li.green__list
+													a(href="#") Downloads
+												li.green__list
+													a(href="#") Wishlist
+												li.green__list
+													a(href="#") Upload Item
+												li.green__list
+													a(href="#") Statement
+												li.green__list
+													a(href="#") Withdraws
 
-						.panel__box.btn
-							a.btn-basket(href="#")
-							a.panel__btn.login(href="#") Login
-							a.panel__btn.register(href="#") Register
-							a.panel__btn.register.login-off(href="#") Logout
+								.panel__box.btn
+									a.btn-basket(href="#")
+									a.panel__btn.login(href="#") Login
+									a.panel__btn.register(href="#") Register
+									a.panel__btn.register.login-off(href="#") Logout
 			.header__down
 				.container
 					nav.menu
@@ -160,19 +167,10 @@ mixin header-login
 										a.basket.header__icon.icon-shopping-cart(href="#")
 											.basket__number 23
 										ul.basket__items
-											li.basket__item
-												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
-												.basket__info
-													a.basket__title(href="#") Grand Ballet
-													a.basket__subtitle(href="#") WordPress
-													.basket__price $59
-											li.basket__item
-												a.basket__icon(href="#" style="background-image: url(img/icon/icon-content.jpg)")
-												.basket__info
-													a.basket__title(href="#") Grand Ballet
-													a.basket__subtitle(href="#") WordPress
-													.basket__price $59
-
+											li
+												+prew-item('background-image: url(img/icon/icon-content.jpg)')
+											li
+												+prew-item('background-image: url(img/icon/icon-content.jpg)')
 											li.basket__total
 												.total__up Total
 													span $118
@@ -333,3 +331,31 @@ mixin down__list
 					.item__date 01 Dec, 2016
 			a.item__status(href="#")
 
+mixin banner(item)
+	.wrapper-picture
+		.picture-wrapper(style= item)
+
+
+mixin prew-item(item)
+	.basket__item
+		a.basket__icon(href="#" style= item)
+		.basket__info
+			a.basket__title(href="#") Grand Ballet
+			a.basket__subtitle(href="#") WordPress
+			.basket__price $59
+
+mixin author(item)
+	.asside__author.wrapper__asside
+		.author-title.page__asside-title= item
+		.author-information
+			a.author-avatar(href="#" style="background-image: url(img/icon/avatar.jpg)")
+			.author-info
+				a.author-name(href="") PsdBoss
+				a.auhor-link(href="") View Profile
+		.author-achivment
+			ul
+				li.icon-meh-o(style="background-image: url(img/icon/orange.png)" title="привет")
+				li.icon-pagelines(style="background-image: url(img/icon/red.png)")
+				li.icon-bolt(style="background-image: url(img/icon/blue.png)")
+				li.icon-foursquare(style="background-image: url(img/icon/green.png)")
+				li.icon-cny(style="background-image: url(img/icon/grey.png)")
