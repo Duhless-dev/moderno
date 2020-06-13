@@ -107,7 +107,7 @@ mixin header
 
 								.panel__box.btn
 									a.btn-basket(href="#")
-									a.panel__btn.login(href="#") Login
+									a.panel__btn.login(data-fancybox data-src="#modal" href="javascript:;" class="btn btn-primary") Login
 									a.panel__btn.register(href="#") Register
 									a.panel__btn.register.login-off(href="#") Logout
 			.header__down
@@ -134,6 +134,19 @@ mixin header
 								a(href="#") Contact
 							li
 								a(href="#") Help
+			div.login-popup(style="display: none;" id="modal")
+				.login-title Login
+				form
+					label.icon-user
+						input(type="text" placeholder="Name" required)
+					label.icon-lock
+						input(type="password" placeholder="Password" required)
+					.login-link
+						button.login-btn(type="submit") Submit
+						a.icon-edit.create(href="#") Creat An Account?
+					a.lost(href="#") Lost Password?
+
+
 mixin header-login
 	.header
 		.header__top
