@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.header-contuct
+					+header-login
+				section.page_items-search
+					+search
+				section.breadcrumbs-contuct
+					.container
+						+breadcrumbs('Home', 'Contact US')
+				section.contact
+					.container
+						.contact-title.universal-title Contact With Us
+						.contact__inner
+							.contact-map
+								div(style="&quot;position:relative;overflow:hidden;&quot;&gt;")
+									a(href='https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') &Mcy;&ocy;&scy;&kcy;&vcy;&acy;
+									a(href='https://yandex.ru/maps/21619/fryazino/search/%D0%A4%D1%80%D1%8F%D0%B7%D0%B8%D0%BD%D0%BE/?from=tabbar&ll=38.045426%2C55.958971&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=14' style='color:#eee;font-size:12px;position:absolute;top:14px;') &Fcy;&rcy;&yacy;&zcy;&icy;&ncy;&ocy; &mdash; &YAcy;&ncy;&dcy;&iecy;&kcy;&scy;.&Kcy;&acy;&rcy;&tcy;&ycy;
+									iframe(src='https://yandex.ru/map-widget/v1/-/CCQdzFR98D' width='1091' height='414' frameborder='1' allowfullscreen='true' style='position:relative;')
+							.contact__content
+								.contact__connect
+									.contact__address.icon-map-marker
+										.connect-title Our Office Address
+										.contact-text PO Box 16122 Collins Street West Victoria 8007 Australia
+									.contact__phone.icon-phone
+										.connect-title Phone
+										a.contact-text(href="tel:61383766284") +61 3 8376 6284
+									.contact__mail.icon-envelope-o
+										.connect-title E-mail
+										a.contact-text(href="mailto:n89263551567@inbox.ru" ) info@foxtar.com
+								.contact__form
+									.contact__form-title Drop Us A Message 
+									form
+										input(type="text" placeholder="Name*" required)
+										input(type="text" placeholder="Name*" required)
+										textarea.contact-textarea(placeholder="Message*"  required )
+										button(type="submit") Send Message
+
+
+
+			footer.footer-adaptive
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js")   

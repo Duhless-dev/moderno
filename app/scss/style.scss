@@ -2046,6 +2046,133 @@
 	}
 //* =======================================END ABOUT US==================================================
 
+//! =======================================CONTACT US==================================================
+.breadcrumbs-contuct{
+	background-color: #f4f6f5;
+}
+.contact{
+	background-color: #f4f6f5;
+	padding-bottom: 137px;
+}
+.contact__inner{
+	padding: 33px 40px 15px;
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	border-top: none;
+}
+.contact-map{
+	margin-bottom: 60px;
+	iframe{
+		outline: none;
+		border: none;
+	}
+}
+
+.contact__content{
+	display: flex;
+}
+.contact__connect{
+	max-width: 270px;
+	width: 100%;
+	margin-right: 90px;
+	.icon-map-marker{
+		margin-bottom: 35px;
+	}
+	.icon-phone{
+		margin-bottom: 25px;
+	}
+}
+.contact__address,.contact__phone,.contact__mail{
+	padding-left: 40px;
+	position: relative;
+	font-family: 'Roboto-Regular',sans-serif !important;
+	a{
+		font-family: 'Roboto-Regular',sans-serif !important;
+	}
+	&::before{
+		font-family: 'icomoon';
+		left: 0px;
+		position: absolute;
+		color: #8bc34a;
+		font-size: 24px;
+	}
+}
+
+.connect-title{
+	color: #263238;
+font-size: 20px;
+@include f500;
+position: relative;
+padding-bottom: 20px;
+margin-bottom: 20px;
+
+&::after{
+	position: absolute;
+	content: '';
+	height: 4px;
+	background-color: $green;
+	width: 44px;
+	bottom: 0px;
+	left: 0;
+	}
+}
+.contact-text{
+	color: #707070;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+.contact__form-title{
+	color: #333333;
+	font-size: 24px;
+	@include f500;
+	margin-bottom: 20px;
+}
+.contact__form{
+	width: 100%;
+	input{
+		padding: 0 17px;
+		height: 43px;
+		max-width: 349px;
+		width: 100%;
+		border: none;
+		background-color: #f1f4f5;
+		margin-bottom: 28px;
+		&::placeholder{
+			color: #7a7a7a;
+			font-size: 15px;
+		}
+		&+input{
+			margin-left: 25px;
+		}
+	}
+	.contact-textarea{
+		padding: 16px;
+		display: block;
+		margin: 0px;
+		width: 100%;
+		height: 183px;
+		border: none;
+		background-color: #f1f4f5;
+		resize:none;
+		margin-bottom: 25px;
+		&::placeholder{
+			color: #7a7a7a;
+			font-size: 15px;
+		}
+	}
+	button{
+		outline: none;
+		border: none;
+		color: #ffffff;
+		font-size: 16px;
+		@include f700;
+		padding: 20px 37px 19px;
+		line-height: 13px;
+		background-color: $green;
+	}
+}
+//* =======================================CONTACT US==================================================
 
   
 @import "media";
