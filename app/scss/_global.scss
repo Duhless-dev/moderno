@@ -171,9 +171,9 @@ margin-bottom: 25px;
 
 .global-text{
 	color: #707070;
-font-size: 16px;
-margin-bottom: 42px;
-max-width: 850px;
+	font-size: 16px;
+	margin-bottom: 42px;
+	max-width: 850px;
 }
 .wrapper-tabs{
 	width: 100%;
@@ -253,12 +253,45 @@ height: 63px;
 	line-height: 13px;
 	margin-bottom: 17px;
 }
-.auhor-link{
+.author-link{
 	font-size: 13px;
 	color: #707070;
 	padding: 8px 12px;
 	border: 1px solid #cccccc;
 	line-height: 11px;
+	position: relative;
+}
+.author-online{
+	display: none;
+	padding: 8px 14px 8px 27px;
+	&::before{
+	position: absolute;
+	content: '';
+	border-radius:50%;
+	left: 10px;
+	top: 9px;
+	width: 9px;
+	height: 9px;
+	background-color: #8bbe44;
+	}
+}
+
+.author-offline{
+	display: none;
+	padding: 8px 14px 8px 27px;
+	&::before{
+	border-radius:50%;
+	left: 10px;
+	top: 9px;
+	position: absolute;
+	content: '';
+	width: 9px;
+	height: 9px;
+	background-color: $red;
+	}
+}
+.author-active{
+	display: block;
 }
 .author-achivment{
 	ul{
@@ -287,7 +320,7 @@ height: 63px;
 }
 .universal-title{
 	color: #444444;
-	font-size: 24px;
+	font-size: 20px;
 	@include f500;
 	height: 70px;
 	background-color: #ffffff;

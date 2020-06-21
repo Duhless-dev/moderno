@@ -34,7 +34,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-search:before {
+.icon-search:before {
   content: "\f002";
 }
 .icon-envelope-o:before {
@@ -81,6 +81,15 @@
 }
 .icon-bell-o:before {
   content: "\f0a2";
+}
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
 }
 .icon-sort:before {
   content: "\f0dc";

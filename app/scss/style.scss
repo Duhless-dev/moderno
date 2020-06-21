@@ -1174,11 +1174,13 @@
             margin-bottom: 38px;
         }
         li{
-            display: inline-block;
+				display: inline-block;
+				
             &+li{
                 margin-left: 7px;
             }
            a{
+				border-radius: 2px;
             width: 28px;
             height: 28px;
            }
@@ -1239,11 +1241,11 @@
         background-position: -56px -0;
     }
     .col-pinterest{
-        background-position: -28px -0;
+        background-position: -0 -28px
     }
     .col-in{
        
-        background-position: -0 -28px;
+        background-position: -28px -0;
     }
 // =======================================FOOTER==================================================
 // =======================================PAGE-ITEMS==================================================
@@ -1753,6 +1755,9 @@
 // =======================================END PAGE-ITEMS==================================================
 
 //! =======================================PRODUCT-DET====================================================
+.product-det__content{
+	background-color: #f4f6f5;
+}
 .product-det__wrapper{
 	background-color: #f4f6f5;
 	display: flex;
@@ -1886,6 +1891,9 @@
 .product-det__asside{
 	width: 100%;
 	max-width: 270px;
+	.author-active{
+		display: none;
+	}
 	.wrapper__asside{
 	padding-right: 30px;
 	padding-left: 30px;
@@ -1981,7 +1989,7 @@
 	padding-bottom: 150px;
 }
 .content-404{
-	padding-top:64px;
+	padding-top:117px;
 	background-color: $green;
 	text-align: center;
 	padding-bottom: 100px;
@@ -1989,12 +1997,20 @@
 	border-top-width: 0px;
 }
 .title-404{
+	margin-left: -131px;
+	position: relative;
 	font-family: "Open Sans",sans-serif;
 	font-weight: 800;
 	font-size: 300px;
 	text-transform: uppercase;
 	color: #fffefe;
-	margin-bottom: 55px;
+	margin-bottom: 75px;
+	line-height: 200px;
+	img{
+		position: absolute;
+		top: -53px;
+		right: 222px;
+	}
 }
 .subtitle-404{
 	font-family: "Open Sans",sans-serif;
@@ -2005,7 +2021,6 @@
 	margin-bottom: 33px;
 }
 .text-404{
-	
 	color: #ffffff;
 	font-family: "Raleway",sans-serif;
 	font-weight: 500;
@@ -2027,11 +2042,19 @@
 }
 //* =======================================END Page 404==================================================
 //! =======================================ABOUT US==================================================
-	.about__content{
+.breadcrumbs__about{
+	background-color: #f4f6f5;
+}	
+.about__inner{
+		background-color: #f4f6f5;
+		padding-bottom: 143px;
+	}
+.about__content{
 		border: 1px solid #d7d7d7;
 		border-top-width: 0px;
-		padding: 44px 66px 0 51px; 
-		margin-bottom: 143px;
+		padding: 44px 66px 0 51px;
+		background-color: #ffffff; 
+		
 	}
 	.about-title{
 		color: #444444;
@@ -2039,7 +2062,7 @@
 		@include f700;
 		margin-bottom: 23px;
 	}
-	.about-text{
+	.about-pagetext{
 		font-size: 15px;
 		color: #707070;
 		margin-bottom: 53px;
@@ -2173,6 +2196,204 @@ margin-bottom: 20px;
 	}
 }
 //* =======================================CONTACT US==================================================
+//! =======================================PROFILE==================================================
+.profile-page,.breadcrumbs-profile{
+	background-color: #f4f6f5;
+}
+.profile-page{
+	padding-bottom: 113px;
+}
+.profile-page__inner{
+display: flex;
+	.wrapper-picture{
+		height: 368px;
+		margin-bottom: 30px;
+	}
+}
+.profile-page__content{
+	width: 100%;
+}
+.profile-page__asside{
+	max-width: 270px;
+	width: 100%;
+	margin-right: 30px;
+	.wrapper__asside{
+		margin-bottom: 26px;
+	}
+	&-social{
+		ul{
+            margin-bottom: 26px;
+        }
+	}
+	.atuhor-view{
+		display: none;
+	}
+	.author-information{
+		margin-bottom: 44px;
+	}
+}
+.profile-page__asside-btn{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	line-height: 53px;
+	max-width: 100%;
+	background-color: #8bc34a;
+	box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+	font-size: 16px;
+	@include f700;
+	color: #fff;
+	margin-top: 17px;
+}
+.profile-page__asside-btn.icon-envelope-o{
+	font-family: "Roboto", sans-serif !important;
+   font-weight: 500;
+	background-color: #546e7a;
+	
+	&::before{
+		font-family: 'icomoon';
+		position: absolute;
+		left: 50px;
+		font-size: 16px;
+		font-weight: 400;
 
-  
+	}
+}
+.profie-page__content__about{
+	margin-bottom: 30px;
+	ul{
+		display: flex;
+	}
+	li{
+		width: 25%;
+		min-height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		border-top: 1px solid #d7d7d7;
+		border-bottom: 1px solid #d7d7d7;
+		border-left: 1px solid #d7d7d7;
+		&:last-child{
+			border-right: 1px solid #d7d7d7;
+			.profie-page__content__about-text{
+				color:#2d2d2d;
+			}
+		}
+	}
+}
+.profie-page__content__about-title{
+	@include f500;
+	font-size: 14px;
+}
+.profie-page__content__about-text{
+	@include f500;
+	color:#a2a2a2;
+	font-size: 14px;
+	.raiting-star{
+		display: inline-block;
+		padding-left: 0px;
+		padding-right: 7px;
+	}
+	span{
+		color: #c7c9cb;
+	}
+	.raiting-number{
+		color: $dark;
+	}
+	span,.raiting-number{
+		font-size: 12px;
+	}
+}
+.profile-page__tabs{
+	
+	.wrapper-tabs{
+		display: flex;
+		background-color: transparent;
+		border: none;
+		.tabs{
+			display: block;
+			max-width: 270px;
+			width: 100%;
+			margin-right: 30px;	
+		}
+			
+		.tab_content{
+			width: 100%;
+		}
+	}
+	.tabs-btn{
+		display: flex;
+		position: relative;
+		font-family: 'Roboto-Regular',sans-serif !important;
+		font-weight: 400;
+		padding-left: 50px;
+		font-size: 14px;
+		justify-content: flex-start;
+		height: 50px;
+		border: 1px solid #d7d7d7;
+		border-top: none;
+		&:first-child{
+			border-top: 1px solid #d7d7d7;
+		}
+		&::before{
+			position: absolute;
+			color: #d0d0d0;
+			font-size: 14px;
+			font-family: 'icomoon';
+			left: 23px;
+			top: 17px;
+		}
+		&.active{
+		border-bottom: 3px solid $green;
+		color: $dark;
+			font-family: 'Roboto',sans-serif !important;
+			font-weight: 500;
+			&::before{
+				color: $green;
+			}
+		}
+	}
+}
+.tab_content{
+	padding: 0px ;
+	height: auto;
+}
+.profile_page__tab-item-wrapper{
+	padding: 40px 57px 52px 40px;
+	background-color: #ffffff; 
+}
+.skill__item-title{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-style: italic;
+	@include f500;
+	span{
+		font-style: normal;
+		@include f700;
+	}
+}
+.skill__item-line{
+	position: relative;
+	height: 15px;
+	border-radius: 4px;
+	background-color: #f4f4f4;
+	width: 100%;
+	margin-bottom: 20px;
+
+}
+.sill_item-progress{
+	position: absolute;
+	height: 15px;
+	border-radius: 4px;
+	top: 0px;
+	left: 0px;
+}
+//* =======================================PROFILE US==================================================
+
+
+
 @import "media";
