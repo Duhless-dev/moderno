@@ -1,0 +1,110 @@
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.header-setting
+					+header-login
+				section.page_items-search
+					+search
+				section.setting-breadcrumbs
+					.container
+						+breadcrumbs('Home','Settings')
+				section.setting__inner
+					.container
+						.wrapper-tabs
+							.tabs
+								span.tab.active.tabs-btn.icon-angle-right(data-id="1") Personal Information
+								span.tab.tabs-btn.icon-angle-right(data-id="2") Profile
+								span.tab.tabs-btn.icon-angle-right(data-id="3") Badges
+								span.tab.tabs-btn.icon-angle-right(data-id="4") E-mail Settings
+								span.tab.tabs-btn.icon-angle-right(data-id="5") Social Network
+							.tab_content
+								.tab-item.active-tab(id="1")
+									.setting__tab-item
+										.setting-tab-title.universal-title Personal Information
+										.setting-tab__line-wrapper
+											form
+												.setting-tab__line-item
+													label.label-title__universal First Name
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal Last Name
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal Company Name
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal Country
+													select
+														option(value="") Select Your Country
+														option(value="" ) Russia
+												.setting-tab__line-item
+													label.label-title__universal Address Line 1
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal Address Line 2
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal City
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal State / Province / Region
+													input.input-universal(type="text" required)
+												.setting-tab__line-item
+													label.label-title__universal Zip / Postal Code
+													input.input-universal(type="text" required)
+												button.btn-universal-sabmit(type="Submit") Update
+								.tab-item.active-tab(id="2")
+									.setting__tab-item
+										.setting-tab-title.universal-title Personal Information
+										.setting-tab__line-wrapper
+											form
+												.setting-tab__line-item
+													label.label-title__universal First Name
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal Last Name
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal Company Name
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal Country
+													select
+														option(value="" ) Select Your Country
+														option(value="" ) Russia
+												.setting-tab__line-item
+													label.label-title__universal Address Line 1
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal Address Line 2
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal City
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal State / Province / Region
+													input.input-universal(type="text")
+												.setting-tab__line-item
+													label.label-title__universal Zip / Postal Code
+													input.input-universal(type="text")
+												button.btn-universal-sabmit(type="Submit") Update
+
+
+			footer.footer-setting
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js")   

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.header-upload
+					+header-login
+				section.page_items-search
+					+search
+				section.upload-breadcrumbs
+					.container
+						+breadcrumbs('Home','Upload Product')
+				section.upload
+					.container
+						.universal-title Upload Your item
+						.upload-inner
+							form
+								.upload__up
+									.upload-line.label-title__universal
+										label.upload-label Select Categories
+											span *
+										select
+											option(value="") Select
+											option(value="") Wordpress
+											option(value="") Psd
+									.upload-line.label-title__universal
+										label.upload-label Product Name
+											span *
+										input.input-universal(type="text" placeholder= "Enter your product name here ..." required)
+									.upload-line.label-title__universal
+										label.upload-label Product Description
+											span *
+										textarea(placeholder= "<h1> Type your text  here </h1>" required)
+									.upload-line.label-title__universal
+										label.upload-label Upload Main File
+											span *
+										input.input-universal.upload__change-file(type="file" required)
+									.upload-line.label-title__universal
+										label.upload-label Upload Screenshots
+											span *
+										input.input-universal.upload__change-file(type="file" required)
+									.upload-line.label-title__universal
+										label.upload-label File Included
+											span *
+										select
+											option(value="") Select File Type
+											option(value="") Wordpress
+											option(value="") Psd
+									.upload-line.label-title__universal
+										label.upload-label File Dimensions
+											span *
+										input.input-universal(type="text" placeholder= "Enter the item  dimentionss here ..." required)
+									.upload-line.label-title__universal
+										label.upload-label Item Tags
+											span *
+										input.input-universal(type="text" placeholder= "Enter Tag Here" required)
+								.universal-title Set Your Price (US$)
+								.upload__down
+									.upload-line.label-title__universal
+										label.upload-label Regular License
+											span *
+										input.input-universal(type="text" placeholder= "$00.00" required)
+									.upload-line.label-title__universal
+										label.upload-label Extended License
+											span *
+										input.input-universal(type="text" placeholder= "$00.00" required)
+									button.btn-universal-sabmit Submit
+
+
+
+			footer.footer-upload
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js") 

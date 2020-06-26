@@ -89,5 +89,10 @@ $(function () {
 		return false;
 	});
 
+	$('input:file, select').styler({
+		fileBrowse: 'Choose File',
+		filePlaceholder: 'No File Choosen',
+	});
+
 	var mixer = mixitup('.product__inner-filter-item');
 });
