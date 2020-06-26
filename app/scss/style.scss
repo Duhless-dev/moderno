@@ -2593,6 +2593,95 @@ display: flex;
 	}
 }
 //* =======================================ENDUPLOAD==================================================
+//! =======================================DRAWALS==================================================
+.drawals,.drawals-breadcrumbs{
+	background-color: #f4f6f5;
+}
+.drawals{
+	padding-bottom: 144px;
+	.jq-selectbox{
+	height: 40px;
+	max-width: 492px;
+	width: 100%;
+	margin-top: 21px;
+	margin-bottom: 29px;
+	}
+	input{
+		max-width: 492px;
+		width: 100%;
+		margin-top: 21px;
+		margin-bottom: 29px;
+	}
+	button{
+		padding-left: 29px;
+		padding-right: 29px;
+	}
+}
+.drawals__inner{
+	display: flex;
+}
+.drawals__right,.drawals__left{
+	max-width: 570px;
+	width: 100%;
+}
+.drawals__right{
+	margin-left: 30px;
+}
+.drawals__left__inner,.drawals__right__inner{
+	padding: 30px 40px 50px 38px;
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	border-top:none;
+}
+.drawals__right__inner{
+	padding-bottom: 37px;
+}
+.drawals__right__line{
+	max-width: 100%;
+	display: flex;
+	padding-left: 20px;
+	padding-right: 37px;
+	align-items: center;
+	font-size: 13px;
+	height: 42px;
+	color: #444444;
+	&:nth-child(odd){
+		background-color: #f9f9f9;
+	}
+}
+.drawals__left__line{
+	label{
+		display: block;
+		@include f500;
+	}
+}
+.drawals__right__line-date{
+	max-width: 135px;
+	width: 100%;
+}
+.drawals__right__line-mail{
+	max-width: 178px;
+	width: 100%;
+}
+.drawals__right__line-price{
+	max-width: 75px;
+	width: 100%;
+	@include f500;
+}
+.drawals__right__line-status{
+	max-width: 50px;
+	width: 100%;
+	display: none;
+	@include f500;
+	&.active{
+		display: block;
+	}
+}
+.paid{
+	color: $green;
+}
+
+//* =======================================ENDDRAWALS==================================================
 
 
 

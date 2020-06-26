@@ -379,6 +379,9 @@ height: 63px;
 
 .label-title__universal{
 	color: #444444;
+	span{
+		color: $green;
+	}
 }
 .input-universal{
 	height: 40px;
