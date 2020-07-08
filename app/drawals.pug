@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.drawals-upload
+					+header-login
+				section.page_items-search
+					+search
+				section.drawals-breadcrumbs
+					.container
+						+breadcrumbs('Home','Withdrawals')
+				section.drawals
+					.container
+						.drawals__inner
+							.drawals__left
+								.universal-title Withdrawals Earnings
+								.drawals__right__inner
+									form
+										.drawals__left__line
+											label.label-title__universal Amount to Withdraw ($2000.00 Maximum)
+												span  *
+											input.input-universal(type="text" placeholder="Enter the amount you want to withdraw..." required)
+										.drawals__left__line
+											label.label-title__universal Choose your Withdraw Method
+												span  *
+											select
+												option(value="") Select Your Card
+												option(value="") number 1
+												option(value="") number 2
+										.drawals__left__line
+											label.label-title__universal Your Account Name
+												span  *
+											input.input-universal(type="text" placeholder="Enter the amount you want to withdraw...")
+										.drawals__left__line
+											label.label-title__universal Confirm Your Password
+												span  *
+											select
+												option(value="") Select Your Card
+												option(value="") number 1
+												option(value="") number 2
+										button.btn-universal-sabmit Request Withdrawal
+							.drawals__right
+								.universal-title Withdrawal History
+								.drawals__right__inner
+									.drawals__right__line
+										.drawals__right__line-date Dec 26th, 2016
+										.drawals__right__line-mail Psdboss@paypal.com
+										.drawals__right__line-price $200
+										.drawals__right__line-status.pending.active Pending
+										.drawals__right__line-status.paid Pend
+									-var i=0
+									while i<6
+										.drawals__right__line
+											.drawals__right__line-date Dec 26th, 2016
+											.drawals__right__line-mail Psdboss@paypal.com
+											.drawals__right__line-price $200
+											.drawals__right__line-status.pending Pending
+											.drawals__right__line-status.paid.active Pend
+										-i=i+1
+			footer.footer-drawals
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js")   

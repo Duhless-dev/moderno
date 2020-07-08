@@ -1,24 +1,97 @@
 <!DOCTYPE html>
 html(lang="ru")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="css/style.min.css")
-        title Документ
-        
-    body
-        include ./pug/_mixins.pug 
-        .box
-            .h Привет
-            +test
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
 
-        
-            
-        
-        
-        
-        
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-        script(src='js/libs.min.js')
-        script(src="js/main.min.js")
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.header-index
+					+header
+				section.index-search
+					+search
+				section.products
+					.container__fluid
+						.product__title.title Let’s Check Out Our Newest Release Prodcuts
+						.product__inner
+							.product__inner-filter
+								button(type="button" data-filter="all") All
+								button(type="button" data-filter=".category-wordpress") WordPress
+								button(type="button" data-filter=".category-joomla") Joomla
+								button(type="button" data-filter=".category-plugins") Plugins
+								button(type="button" data-filter=".category-component") Component
+								button(type="button" data-filter=".category-psd") PSD 
+							-var product__list = [{bg:"background-image: url(img/filter_content/item_1.jpg)",name:"Responsive Mobile APP", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_3.jpg)",name:"Food Menu", subtitle:"WordPress Plugin" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_4.jpg)",name:"Imac Mockup", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_5.jpg)",name:"Gymedge", subtitle:"Joomla Template" , price:"$45", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Micrsof",rating_number:"05",category:"mix category-joomla",data:"5",category_g:"category-new"},{bg:"background-image: url(img/filter_content/item_6.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$19", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Raklouse",rating_number:"05",category:"mix category-psd",data:"6",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_7.jpg)",name:"Doll Face", subtitle:"Illsatration" , price:"$10", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Mikc Art",rating_number:"05",category:"mix category-psd",data:"7",category_g:"category-popular"},{bg:"background-image: url(img/filter_content/item_8.jpg)",name:"Designer Mockup", subtitle:"PsdTemplate" , price:"$10", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"ThemeLol",rating_number:"05",category:"mix category-joomla",data:"8",category_g:"category-new"}]
+							.product__inner-filter-item
+								for item in product__list
+									.product__wrapper-item(class= item.category class= item.category_g data-order= item.data)
+										+product__item(item)
+							.product__inner-filter-down
+								button(type="button" data-filter=".category-new") All New Items
+								button(type="button" data-filter=".category-popular") Popular Items
+				section.product__slider
+					.container__fluid
+						.product__slider-title This Week Trending Products
+						-var product_slider__list = [{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_1.jpg)",name:"Responsive Template", subtitle:"Site Template" , price:"$19",avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Radiustheme",rating_number:"05",category:"mix category-wordpress",data:"1",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_3.jpg)",name:"Logo Showcae", subtitle:"Joomla Cmponent" , price:"$20", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Manilip",rating_number:"05",category:"mix category-wordpress",data:"2",category_g:"category-new"},{bg:"background-image: url(img/slider_content/item_2.jpg)",name:"The Post Grid Pro", subtitle:"WordPress Plugin" , price:"$15", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"PsdBosS",rating_number:"05",category:"mix category-wordpress",data:"3",category_g:"category-popular"},{bg:"background-image: url(img/slider_content/item_4.jpg)",name:"UI Design", subtitle:"Psd Template" , price:"$12", avatar:"background-image: url(img/filter_content/avatar.jpg)",nik:"Lolypop",rating_number:"05",category:"mix category-psd",data:"4",category_g:"category-popular"}]
+						.product__slider-inner
+							for item in product_slider__list
+								.product__slider-item
+									+product__item(item)
+				section.foxtar
+					.container
+						.foxtar-title   Why You Choose Foxtar Market Place?
+						.foxtar__inner
+							.foxtar__item.lock
+								a(href="#")
+									.foxtar__item-picture
+										+svg__lock
+									.foxtar__item-title Easily Buy & Sell 
+								.foxtar__item-text Dorem Ipsum is simply dummy text of the pring and typesetting industry. Lorem Ipsum has been the industry's standaum.
+							.foxtar__item.prise
+								a(href="#")
+									.foxtar__item-picture
+										+svg__prise
+									.foxtar__item-title Quality Products
+								.foxtar__item-text Dorem Ipsum is simply dummy text of the pring and typesetting industry. Lorem Ipsum has been the industry's standaum.
+							.foxtar__item.heart
+								a(href="#")
+									.foxtar__item-picture
+										+svg__heart
+									.foxtar__item-title Quality Products
+								.foxtar__item-text Dorem Ipsum is simply dummy text of the pring and typesetting industry. Lorem Ipsum has been the industry's standaum.
+				section.author(style="background-image: url(img/author-bg.jpg)")
+					.author__box
+						.author__box-title Over 20,000 Author Are Involved Here!
+						a.author__box-link(href="#") Become A Author
+				section.offer
+					.container
+						.offer-title.title Free Monthly Tutorials To Help You With Your Project 
+						.offer__inner
+							.offer__inner-item
+								a.offer__item-picture(href='#' style='background-image: url(img/offer_content/item_1.jpg)')
+								.offer__item-title
+									a(href='#') Web Design Tutorials
+							.offer__inner-item
+								a.offer__item-picture(href='#' style='background-image: url(img/offer_content/item_2.jpg)')
+								.offer__item-title
+									a(href='#') WordPress Tutorials
+							.offer__inner-item
+								a.offer__item-picture(href='#' style='background-image: url(img/offer_content/item_3.jpg)')
+								.offer__item-title
+									a(href='#') HTML & CSS Tutorials
+			footer.footer-index
+			+footer
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src='js/_libs.min.js')
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js")

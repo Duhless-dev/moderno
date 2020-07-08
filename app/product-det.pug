@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="css/style.min.css")
+		title Moderno
+	body
+		include ./pug/_mixins.pug 
+		include ./pug/_mixin_svg.pug
+		.wrapper
+			.content
+				header.header-product-det
+					+header-login
+				section.page_items-search
+					+search
+				section.product-det__breadcrumbs
+					.container
+						+breadcrumbs('Home','GTBuilder - Construction & Building WordPress Theme')
+				section.product-det__content
+					.container
+						.product-det__wrapper
+							.product-det__inner
+								+banner('background-image: url(img/content/details.jpg);')
+								.global-title GTBuilder - Construction & Building WordPress Theme
+								.global-text Bmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived noning essentially unchanged.
+								.product-det__link-wrapper
+									.product-det__inner-btn
+										ul
+											li
+												a.live(href="#") Live Preview
+											li
+												a.screen(href="#") Screenshots
+											li
+												a.doc(href="#") Documentation
+									.product-det__inner-social
+										ul
+											li
+												a.icon-facebook-f(href="#")
+											li
+												a.icon-twitter(href="#")
+											li
+												a.icon-linkedin(href="#")
+											li
+												a.icon-pinterest-p(href="#")
+								.product-det__tabs
+									.wrapper-tabs
+										.tabs
+											span.tab.active.tabs-btn(data-id="1") Item Features
+											span.tab.tabs-btn(data-id="2") Comments
+											span.tab.tabs-btn(data-id="3") Reviews
+											span.tab.tabs-btn(data-id="4") Support
+										.tab_content
+											.tab-item.active-tab(id="1")
+												ul
+													li.green__list Bhen an unknown printe
+													li.green__list Printing and typesetting industry
+													li.green__list Handard dummy text
+													li.green__list Desktop publishing software
+													li.green__list Bhen an unknown printe
+													li.green__list Printing and typesetting industry
+													li.green__list Bhen an unknown printe
+													li.green__list Handard dummy text
+											.tab-item.active-tab(id="2")
+												ul
+													li.green__list Bhen an unknown printe
+													li.green__list Printing and typesetting industry
+													li.green__list Handard dummy text
+													li.green__list Desktop publishing software
+													li.green__list Bhen an unknown printe
+													li.green__list Printing and typesetting industry
+													li.green__list Bhen an unknown printe
+													li.green__list Handard dummy text
+
+								.product-det__more
+									.product-det__more-title More Product by PsdBosS
+									.product-det__more-miniprew
+										- var i = -1;
+											while i < 5
+												+prew-item('background-image: url(img/content/more1.jpg)')
+												- i++
+							.product-det__asside
+								.asside__productprice.wrapper__asside
+									.productprice-title.page__asside-title Product Price
+									.productprice-select
+										span $59.00
+										form
+											select
+												option(value="") Regular
+												option(value="") Plus
+									.productprice-btn
+										button.icon-shopping-cart Add To Cart
+										button.icon-heart-o Add To Favourites
+										button Buy Now
+								+author('Product Author')
+								.asside-cart.icon-shopping-cart.wrapper__asside 05
+									span Sales
+								.asside__product-information.wrapper__asside
+									.asside__product-information-title.page__asside-title Product Information
+									ul
+										li Released On:
+											span  1 January, 2016
+										li Last Update:
+											span  20 April, 2016
+										li Download:
+											span  613
+										li Version:
+											span  1.1
+										li Compatibility:
+											span  Wordpress 4+
+										li 
+											| Compatible Browsers:
+											br
+											span IE9, IE10, IE11, Firefox, Safari, Opera, Chrome
+
+
+
+
+
+
+
+
+
+
+			footer.footer-product-det
+				+footer
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="js/_libs.min.js")
+		script(src= 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+		script(src="js/main.js")   
